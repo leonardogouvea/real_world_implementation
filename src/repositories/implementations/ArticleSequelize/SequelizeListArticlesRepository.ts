@@ -14,7 +14,7 @@ export class SequelizeListArticlesRepository implements IListArticleRepository {
                     'username',
                     'bio',
                     'image',
-                ],where
+                ]
             },
             attributes: [
                 'slug',
