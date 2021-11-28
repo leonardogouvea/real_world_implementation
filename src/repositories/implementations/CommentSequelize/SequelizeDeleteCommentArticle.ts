@@ -1,6 +1,6 @@
 import { IDeleteCommentArticleRepository } from "../../Comment/IDeleteCommentArticleRepository";
-const  ArticleModel = require('../../../models/article.model'); 
-const  CommentsModel = require('../../../models/comments.model'); 
+const  ArticleModel = require('../../../database/models/article.model'); 
+const  CommentsModel = require('../../../database/models/comments.model'); 
 
 export class SequelizeDeleteCommentArticle implements IDeleteCommentArticleRepository {
 

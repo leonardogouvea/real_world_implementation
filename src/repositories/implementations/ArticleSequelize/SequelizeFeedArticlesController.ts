@@ -1,5 +1,5 @@
 import { IFeedArticleRepository } from "../../Article/FeedArticleRepository";
-const  ArticleModel = require('../../../models/article.model'); 
+const  ArticleModel = require('../../../database/models/article.model'); 
 
 export class SequelizeFeedArticlesRepository implements IFeedArticleRepository {
     

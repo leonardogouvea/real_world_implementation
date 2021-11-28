@@ -1,8 +1,8 @@
 import { IAddCommentsArticleRepository } from "../../Comment/IAddCommentsArticleRepository";
 import  { Comment }  from "../../../entities/Comment";
-const  ArticleModel = require('../../../models/article.model');
-const  UserModel = require('../../../models/user.model');
-const  CommentsModel = require('../../../models/comments.model'); 
+const  ArticleModel = require('../../../database/models/article.model');
+const  UserModel = require('../../../database/models/user.model');
+const  CommentsModel = require('../../../database/models/comments.model'); 
 
 export class SequelizeAddCommentArticle implements IAddCommentsArticleRepository {
 

@@ -1,7 +1,7 @@
 import { ICreateArticleRepository } from "../../Article/CreateArticleRepository";
 import  { Article }  from "../../../entities/Article";
-const  UserModel = require('../../../models/user.model'); 
-const  ArticleModel = require('../../../models/article.model'); 
+const  UserModel = require('../../../database/models/user.model'); 
+const  ArticleModel = require('../../../database/models/article.model'); 
 
 export class SequelizeCreateArticleRepository implements ICreateArticleRepository {
 

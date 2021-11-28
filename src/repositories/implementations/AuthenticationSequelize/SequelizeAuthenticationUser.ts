@@ -1,42 +1,46 @@
 import { IAuthenticationRepository } from '../../Authentication/IAuthenticationRepository';
 import  { User } from "../../../entities/User";
-const bcrypt = require('bcrypt');
-const  UserModel = require('../../../models/user.model'); 
 import  jwt  from 'jsonwebtoken';
-
-require('dotenv').config();
+const bcrypt = require('bcrypt');
+const  UserModel = require('../../../database/models/user.model'); 
 const tokenSecret = process.env.TOKEN_SECRET;
+require('dotenv').config();
 
 export class SequelizeAuthenticationUser implements IAuthenticationRepository {
 
     async verifyUser(email: string, password: string): Promise<User>{
-        const user = await UserModel.findOne({  where: { email }})
+        const user = await UserModel.findOne({  
+            where: { email },
+            attributes: [
+                'id',
+                'username',
+                'password',
+                'email',
+                'bio',
+                'image'
+            ]
+        });
+        
         if( !user ){
             return user;
         }
         if ( !await bcrypt.compare(password, user.password) ){
             return user;
         } 
+        
         user.password = undefined;
-        return user;
+        return user.dataValues;
     }
 
-    async auth(User: User): Promise<object> {
-        for (const [key, value] of Object.entries(User)) {
-            const userId = value.id;
-            const authentication = jwt.sign({id: userId}, tokenSecret, {
-                expiresIn: 86400,
-            });
+    async auth(user: User): Promise<object> {
 
-            const user_authentication = {
-                email: value.email,
-                token: authentication,
-                username: value.username,
-                bio: value.bio,
-                image: value.image
-            };
+        const authentication = jwt.sign({id: user.id}, tokenSecret, {
+            expiresIn: 86400,
+        });
+        
+        delete user.id;
+        user.token = authentication
 
-            return  user_authentication;
-        }      
+        return  {user: user};
     }
 }

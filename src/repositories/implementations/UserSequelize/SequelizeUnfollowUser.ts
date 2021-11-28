@@ -1,6 +1,6 @@
 import { IUnfollowUserRepository } from "../../User/IUnfollowUserRepository";
-const  UserModel = require('../../../models/user.model');
-const  FollowModel = require('../../../models/followers.model'); 
+const  UserModel = require('../../../database/models/user.model');
+const  FollowModel = require('../../../database/models/followers.model'); 
 
 export class SequelizeUnfollowUser implements IUnfollowUserRepository {
 

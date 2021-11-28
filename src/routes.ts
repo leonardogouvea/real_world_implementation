@@ -30,6 +30,18 @@ router.post('/api/users/login', (request, response) => {
     return authenticationController.handle(request, response);
 });
 
+router.get('/api/articles/:slug/comments', (request, response) => {
+    return getCommentsArticleController.handle(request, response);
+});
+
+router.get('/api/tags', (request, response) => {
+    return listOfTagsController.handle(request, response);
+});
+
+router.get('/api/articles', (request, response) => {
+    return listArticlesController.handle(request, response);
+});
+
 router.use(Auth);
 
 router.put('/api/user', (request, response) => {
@@ -104,9 +116,7 @@ router.delete('/api/articles/:slug/favorite', (request, response) => {
     return unfavoriteArticleController.handle(request, response);
 });
 
-router.get('/api/tags', (request, response) => {
-    return listOfTagsController.handle(request, response);
-});
+
 
 
 

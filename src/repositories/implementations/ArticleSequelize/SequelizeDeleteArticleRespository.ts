@@ -1,5 +1,5 @@
 import { IDeleteArticleRepository } from "../../Article/DeleteArticleRepository";
-const  ArticleModel = require('../../../models/article.model'); 
+const  ArticleModel = require('../../../database/models/article.model'); 
 
 export class SequelizeDeleteArticleRepository implements IDeleteArticleRepository {
 
