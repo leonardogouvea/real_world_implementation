@@ -1,7 +1,7 @@
 import { ICreateUsersRepository } from "../../User/ICreateUsersRepository";
 import  { User }  from "../../../entities/User";
 const bcrypt = require('bcrypt');
-const  UserModel = require('../../../models/user.model');
+const  UserModel = require('../../../database/models/user.model');
 import  jwt  from 'jsonwebtoken';
 
 require('dotenv').config();

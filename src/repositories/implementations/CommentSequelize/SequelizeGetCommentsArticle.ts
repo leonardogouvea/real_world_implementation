@@ -1,6 +1,6 @@
 import { IGetCommentsArticleRepository } from "../../Comment/IGetCommentsArticleRepository";
-const  ArticleModel = require('../../../models/article.model');
-const UserModel = require('../../../models/user.model');
+const  ArticleModel = require('../../../database/models/article.model');
+const UserModel = require('../../../database/models/user.model');
 
 export class SequelizeGetCommentsArticle implements IGetCommentsArticleRepository {
 

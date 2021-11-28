@@ -1,11 +1,11 @@
 import { Sequelize } from'sequelize';
 const dbConfing = require('../config/database.js');
 
-import UserModel from '../models/user.model';
-import FollowersModel from '../models/followers.model';
-import ArticleModel from '../models/article.model';
-import CommentsModel from '../models/comments.model';
-import FavoriteArticleModel from '../models/favoriteArticle.model';
+import UserModel from './models/user.model';
+import FollowersModel from './models/followers.model';
+import ArticleModel from './models/article.model';
+import CommentsModel from './models/comments.model';
+import FavoriteArticleModel from './models/favoriteArticle.model';
 
 const connection = new Sequelize(dbConfing);
 

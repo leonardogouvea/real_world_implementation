@@ -1,5 +1,5 @@
 import { IGetCurrentUserRepository } from "../../User/IGetCurrentUserRepository";
-const  UserModel = require('../../../models/user.model'); 
+const  UserModel = require('../../../database/models/user.model'); 
 
 export class SequelizeGetCurrentUserRepository implements IGetCurrentUserRepository{
 

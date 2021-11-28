@@ -1,5 +1,5 @@
 import { IUpdateArticleRepository } from "../../Article/UpdateArticleRepository";
-const  ArticleModel = require('../../../models/article.model'); 
+const  ArticleModel = require('../../../database/models/article.model'); 
 const slug = require('slug');
 
 export class SequelizeUpdateArticlesRepository implements IUpdateArticleRepository {

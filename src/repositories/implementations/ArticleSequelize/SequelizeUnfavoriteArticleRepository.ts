@@ -1,6 +1,6 @@
 import { IUnfavoriteArticleRepository } from "../../Article/UnfavoriteArticleRepository";
-const  ArticleModel = require('../../../models/article.model');
-const  FavoriteArticleModel = require('../../../models/favoriteArticle.model'); 
+const  ArticleModel = require('../../../database/models/article.model');
+const  FavoriteArticleModel = require('../../../database/models/favoriteArticle.model'); 
 
 export class SequelizeUnfavoriteArticleRepository implements IUnfavoriteArticleRepository {
 

@@ -1,5 +1,5 @@
 import { IGetArticleRepository } from "../../Article/GetArticleRepository";
-const  ArticleModel = require('../../../models/article.model'); 
+const  ArticleModel = require('../../../database/models/article.model'); 
 
 export class SequelizeGetArticlesRepository implements IGetArticleRepository {
     

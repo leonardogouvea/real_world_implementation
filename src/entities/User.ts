@@ -1,10 +1,12 @@
 export class User  {
     [x: string]: any;
-    public readonly id: string;
+    public id: string;
 
     public username: string;
     public email: string;
     public password: string;
+    public bio?: string;
+    public image?: string;
 
     constructor(props: Omit<User, 'id'>, id?: StringConstructor){
         Object.assign(this, props);

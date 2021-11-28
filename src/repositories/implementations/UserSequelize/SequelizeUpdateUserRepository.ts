@@ -1,5 +1,5 @@
 import { IUpdateUsersRepository } from "../../User/IUpdateUserRepository";
-const  UserModel = require('../../../models/user.model'); 
+const  UserModel = require('../../../database/models/user.model'); 
 const bcrypt = require('bcrypt');
 
 export class SequelizeUpdateUserRepository implements IUpdateUsersRepository {

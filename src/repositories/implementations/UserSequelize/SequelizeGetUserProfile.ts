@@ -1,5 +1,5 @@
 import { IGetUserProfileRepository } from "../../User/IGetUserProfileRepository";
-const  UserModel = require('../../../models/user.model'); 
+const  UserModel = require('../../../database/models/user.model'); 
 
 export class SequelizeGetUserProfile implements IGetUserProfileRepository{
 

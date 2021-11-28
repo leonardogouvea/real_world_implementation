@@ -11,7 +11,7 @@
                                   
   },
   "include": [
-    "src/**/*.ts", "src/models/user.model.js"  ],
+    "src/**/*.ts", "src/database/models/user.model.js"  ],
     "entities": ["/**/*.entity.{ts,js}"],
   "exclude": ["node_modules"]
 }

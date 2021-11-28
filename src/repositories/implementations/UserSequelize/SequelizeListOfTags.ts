@@ -1,5 +1,5 @@
 import { IListOfTagsRepository } from "../../User/IListOfTagsRepository";
-const  ArticleModel = require('../../../models/article.model'); 
+const  ArticleModel = require('../../../database/models/article.model'); 
 
 export class ListOfTagsRepository implements IListOfTagsRepository{
 
